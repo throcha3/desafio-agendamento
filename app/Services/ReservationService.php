@@ -40,12 +40,12 @@ class ReservationService
                 $agora->add(1, 'day');
                 //return response()->json($produto, Response::HTTP_OK);
             } catch (QueryException $exception) {
-                dd($exception);
+                //dd($exception);
                 return array('message' => 'Erro de conexão com o banco de dados', 'http_response' => Response::HTTP_INTERNAL_SERVER_ERROR);
                 break;
             }
         }
-
+        //If nothig happened until now, probably it's all good.
         return array('message' => "Successo ao inserir reservas.", 'http_response' => Response::HTTP_OK);
     }
 
