@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "8819b404-88fb-444d-afa0-decd9707e256",
+		"name": "desafio-sti-ambev Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Admin123\",\r\n    \"email\": \"admin@adm.com.br\",\r\n    \"password\" : \"584uac\",\r\n    \"password_confirmation\" : \"584uac\"\r\n}"
+				},
+				"url": "http://104.131.55.81/desafio-agendamento/api/auth/signup",
+				"description": "Esse é o endpoint para cadastrar novos usuários. O conteúdo do body é um json contendo, name, email, password, e password_confirmation."
+			},
+			"response": []
+		},
+		{
+			"name": "Login de acesso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\" : \"123xe\"\r\n}"
+				},
+				"url": "http://104.131.55.81/desafio-agendamento/api/auth/login",
+				"description": "Endpoint usado para efetuar login. Lembrar de salvar a chave de acesso para acesso aos demais endpoints."
+			},
+			"response": []
+		},
+		{
+			"name": "Dados do usuário atual",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZTExOWZkODFjYTU1MGNlMmQ4NDEyYjBjNjYxNWU0NWMxYjFlMzk5MGNmMGMxZTRiNTIxMmIzOGJkOTYwMTk3NGZkNTEzYWU5MTBlYWI0ZGEiLCJpYXQiOjE2MDE1ODg3NzYsIm5iZiI6MTYwMTU4ODc3NiwiZXhwIjoxNjAxNzYxNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.mOxI6Sx9Ol2CnowV4s0wUW71F_vqtUi8foNZT-9V58CHiFCtHASvMHm73dcxgeNCNvrH8ijwnKc8_3XzMD1TzKRSvSNKGC_AOpQ2OqZ716XoA2SuSOOiVAVQh2FytRCD2MvzBlORFJNFrP0HuyuGph7Ma4qHb6E8wg34bdWkijsgtYAhGx81FlDZfEvmJDSkJlg6JAn-IHjiF2eMq-Qk-eBGrTkMf3qLQxoETQSsahDlVHTYfYTtIp94mdYoYJd4YQ_tcVgiQy3PjKmtVX4wzfqPeYxGsJRzdl9Vcdxismdp49R_RgvKKknwK3I2zQZQTrlMpF8j1BnaE9--wn4dw75-z5P6e5VI-_CrIf1aywTMcrm44-j8n4RW_zNIbqcCkB8uWljKfGQgHEMxw3YrtnzNRUAzDk2LAspDpRS6D9RHeTOfJ5ju4ophAbWe3fuz0RqX6RIEvNLU2vhRzuBhKuk1zleadaQ4-ZUOc6kEi8_GrkLyseQ28kaQ2XNZkoKEyfB_0qjqTZiqJtuDuV1U2HBlE-SiOfFeOHyVS60wP2iX5azZvP2QPp094Sb-aXPC7Hf8e1-DnSbvVD8hQ0seH8nqbZ47nFWg33yMRqFXiOy_vENzkhh5crcemMBg2_w4sf9p3ybfWYMbIfIHzeUlYN5cNgtYDxDqZLH_TIfK2S8",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://104.131.55.81/desafio-agendamento/api/auth/user",
+				"description": "Endpoint usado para efetuar login. Lembrar de salvar a chave de acesso para acesso aos demais endpoints."
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZTExOWZkODFjYTU1MGNlMmQ4NDEyYjBjNjYxNWU0NWMxYjFlMzk5MGNmMGMxZTRiNTIxMmIzOGJkOTYwMTk3NGZkNTEzYWU5MTBlYWI0ZGEiLCJpYXQiOjE2MDE1ODg3NzYsIm5iZiI6MTYwMTU4ODc3NiwiZXhwIjoxNjAxNzYxNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.mOxI6Sx9Ol2CnowV4s0wUW71F_vqtUi8foNZT-9V58CHiFCtHASvMHm73dcxgeNCNvrH8ijwnKc8_3XzMD1TzKRSvSNKGC_AOpQ2OqZ716XoA2SuSOOiVAVQh2FytRCD2MvzBlORFJNFrP0HuyuGph7Ma4qHb6E8wg34bdWkijsgtYAhGx81FlDZfEvmJDSkJlg6JAn-IHjiF2eMq-Qk-eBGrTkMf3qLQxoETQSsahDlVHTYfYTtIp94mdYoYJd4YQ_tcVgiQy3PjKmtVX4wzfqPeYxGsJRzdl9Vcdxismdp49R_RgvKKknwK3I2zQZQTrlMpF8j1BnaE9--wn4dw75-z5P6e5VI-_CrIf1aywTMcrm44-j8n4RW_zNIbqcCkB8uWljKfGQgHEMxw3YrtnzNRUAzDk2LAspDpRS6D9RHeTOfJ5ju4ophAbWe3fuz0RqX6RIEvNLU2vhRzuBhKuk1zleadaQ4-ZUOc6kEi8_GrkLyseQ28kaQ2XNZkoKEyfB_0qjqTZiqJtuDuV1U2HBlE-SiOfFeOHyVS60wP2iX5azZvP2QPp094Sb-aXPC7Hf8e1-DnSbvVD8hQ0seH8nqbZ47nFWg33yMRqFXiOy_vENzkhh5crcemMBg2_w4sf9p3ybfWYMbIfIHzeUlYN5cNgtYDxDqZLH_TIfK2S8",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://104.131.55.81/laravel/desafio-agendamento/api/auth/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas as reservas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZTExOWZkODFjYTU1MGNlMmQ4NDEyYjBjNjYxNWU0NWMxYjFlMzk5MGNmMGMxZTRiNTIxMmIzOGJkOTYwMTk3NGZkNTEzYWU5MTBlYWI0ZGEiLCJpYXQiOjE2MDE1ODg3NzYsIm5iZiI6MTYwMTU4ODc3NiwiZXhwIjoxNjAxNzYxNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.mOxI6Sx9Ol2CnowV4s0wUW71F_vqtUi8foNZT-9V58CHiFCtHASvMHm73dcxgeNCNvrH8ijwnKc8_3XzMD1TzKRSvSNKGC_AOpQ2OqZ716XoA2SuSOOiVAVQh2FytRCD2MvzBlORFJNFrP0HuyuGph7Ma4qHb6E8wg34bdWkijsgtYAhGx81FlDZfEvmJDSkJlg6JAn-IHjiF2eMq-Qk-eBGrTkMf3qLQxoETQSsahDlVHTYfYTtIp94mdYoYJd4YQ_tcVgiQy3PjKmtVX4wzfqPeYxGsJRzdl9Vcdxismdp49R_RgvKKknwK3I2zQZQTrlMpF8j1BnaE9--wn4dw75-z5P6e5VI-_CrIf1aywTMcrm44-j8n4RW_zNIbqcCkB8uWljKfGQgHEMxw3YrtnzNRUAzDk2LAspDpRS6D9RHeTOfJ5ju4ophAbWe3fuz0RqX6RIEvNLU2vhRzuBhKuk1zleadaQ4-ZUOc6kEi8_GrkLyseQ28kaQ2XNZkoKEyfB_0qjqTZiqJtuDuV1U2HBlE-SiOfFeOHyVS60wP2iX5azZvP2QPp094Sb-aXPC7Hf8e1-DnSbvVD8hQ0seH8nqbZ47nFWg33yMRqFXiOy_vENzkhh5crcemMBg2_w4sf9p3ybfWYMbIfIHzeUlYN5cNgtYDxDqZLH_TIfK2S8",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://104.131.55.81/desafio-agendamento/api/getAll?start=20-03-27&end=20-12-20",
+					"protocol": "http",
+					"host": [
+						"104",
+						"131",
+						"55",
+						"81"
+					],
+					"path": [
+						"desafio-agendamento",
+						"api",
+						"getAll"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "20-03-27"
+						},
+						{
+							"key": "end",
+							"value": "20-12-20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Reserva",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZTExOWZkODFjYTU1MGNlMmQ4NDEyYjBjNjYxNWU0NWMxYjFlMzk5MGNmMGMxZTRiNTIxMmIzOGJkOTYwMTk3NGZkNTEzYWU5MTBlYWI0ZGEiLCJpYXQiOjE2MDE1ODg3NzYsIm5iZiI6MTYwMTU4ODc3NiwiZXhwIjoxNjAxNzYxNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.mOxI6Sx9Ol2CnowV4s0wUW71F_vqtUi8foNZT-9V58CHiFCtHASvMHm73dcxgeNCNvrH8ijwnKc8_3XzMD1TzKRSvSNKGC_AOpQ2OqZ716XoA2SuSOOiVAVQh2FytRCD2MvzBlORFJNFrP0HuyuGph7Ma4qHb6E8wg34bdWkijsgtYAhGx81FlDZfEvmJDSkJlg6JAn-IHjiF2eMq-Qk-eBGrTkMf3qLQxoETQSsahDlVHTYfYTtIp94mdYoYJd4YQ_tcVgiQy3PjKmtVX4wzfqPeYxGsJRzdl9Vcdxismdp49R_RgvKKknwK3I2zQZQTrlMpF8j1BnaE9--wn4dw75-z5P6e5VI-_CrIf1aywTMcrm44-j8n4RW_zNIbqcCkB8uWljKfGQgHEMxw3YrtnzNRUAzDk2LAspDpRS6D9RHeTOfJ5ju4ophAbWe3fuz0RqX6RIEvNLU2vhRzuBhKuk1zleadaQ4-ZUOc6kEi8_GrkLyseQ28kaQ2XNZkoKEyfB_0qjqTZiqJtuDuV1U2HBlE-SiOfFeOHyVS60wP2iX5azZvP2QPp094Sb-aXPC7Hf8e1-DnSbvVD8hQ0seH8nqbZ47nFWg33yMRqFXiOy_vENzkhh5crcemMBg2_w4sf9p3ybfWYMbIfIHzeUlYN5cNgtYDxDqZLH_TIfK2S8"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"space_id\" : 5,\r\n    \"user_id\" : 2,\r\n    \"start\" : \"20-10-11\",\r\n    \"end\" : \"20-10-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://104.131.55.81/desafio-agendamento/api/store"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Reservas por Data e Usuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZTExOWZkODFjYTU1MGNlMmQ4NDEyYjBjNjYxNWU0NWMxYjFlMzk5MGNmMGMxZTRiNTIxMmIzOGJkOTYwMTk3NGZkNTEzYWU5MTBlYWI0ZGEiLCJpYXQiOjE2MDE1ODg3NzYsIm5iZiI6MTYwMTU4ODc3NiwiZXhwIjoxNjAxNzYxNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.mOxI6Sx9Ol2CnowV4s0wUW71F_vqtUi8foNZT-9V58CHiFCtHASvMHm73dcxgeNCNvrH8ijwnKc8_3XzMD1TzKRSvSNKGC_AOpQ2OqZ716XoA2SuSOOiVAVQh2FytRCD2MvzBlORFJNFrP0HuyuGph7Ma4qHb6E8wg34bdWkijsgtYAhGx81FlDZfEvmJDSkJlg6JAn-IHjiF2eMq-Qk-eBGrTkMf3qLQxoETQSsahDlVHTYfYTtIp94mdYoYJd4YQ_tcVgiQy3PjKmtVX4wzfqPeYxGsJRzdl9Vcdxismdp49R_RgvKKknwK3I2zQZQTrlMpF8j1BnaE9--wn4dw75-z5P6e5VI-_CrIf1aywTMcrm44-j8n4RW_zNIbqcCkB8uWljKfGQgHEMxw3YrtnzNRUAzDk2LAspDpRS6D9RHeTOfJ5ju4ophAbWe3fuz0RqX6RIEvNLU2vhRzuBhKuk1zleadaQ4-ZUOc6kEi8_GrkLyseQ28kaQ2XNZkoKEyfB_0qjqTZiqJtuDuV1U2HBlE-SiOfFeOHyVS60wP2iX5azZvP2QPp094Sb-aXPC7Hf8e1-DnSbvVD8hQ0seH8nqbZ47nFWg33yMRqFXiOy_vENzkhh5crcemMBg2_w4sf9p3ybfWYMbIfIHzeUlYN5cNgtYDxDqZLH_TIfK2S8"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://104.131.55.81/desafio-agendamento/api/getAllByUser?userid=2&start=20-10-11&end=20-10-15",
+					"protocol": "http",
+					"host": [
+						"104",
+						"131",
+						"55",
+						"81"
+					],
+					"path": [
+						"desafio-agendamento",
+						"api",
+						"getAllByUser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						},
+						{
+							"key": "start",
+							"value": "20-10-11"
+						},
+						{
+							"key": "end",
+							"value": "20-10-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Reservas por Data e Espaço",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZTExOWZkODFjYTU1MGNlMmQ4NDEyYjBjNjYxNWU0NWMxYjFlMzk5MGNmMGMxZTRiNTIxMmIzOGJkOTYwMTk3NGZkNTEzYWU5MTBlYWI0ZGEiLCJpYXQiOjE2MDE1ODg3NzYsIm5iZiI6MTYwMTU4ODc3NiwiZXhwIjoxNjAxNzYxNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.mOxI6Sx9Ol2CnowV4s0wUW71F_vqtUi8foNZT-9V58CHiFCtHASvMHm73dcxgeNCNvrH8ijwnKc8_3XzMD1TzKRSvSNKGC_AOpQ2OqZ716XoA2SuSOOiVAVQh2FytRCD2MvzBlORFJNFrP0HuyuGph7Ma4qHb6E8wg34bdWkijsgtYAhGx81FlDZfEvmJDSkJlg6JAn-IHjiF2eMq-Qk-eBGrTkMf3qLQxoETQSsahDlVHTYfYTtIp94mdYoYJd4YQ_tcVgiQy3PjKmtVX4wzfqPeYxGsJRzdl9Vcdxismdp49R_RgvKKknwK3I2zQZQTrlMpF8j1BnaE9--wn4dw75-z5P6e5VI-_CrIf1aywTMcrm44-j8n4RW_zNIbqcCkB8uWljKfGQgHEMxw3YrtnzNRUAzDk2LAspDpRS6D9RHeTOfJ5ju4ophAbWe3fuz0RqX6RIEvNLU2vhRzuBhKuk1zleadaQ4-ZUOc6kEi8_GrkLyseQ28kaQ2XNZkoKEyfB_0qjqTZiqJtuDuV1U2HBlE-SiOfFeOHyVS60wP2iX5azZvP2QPp094Sb-aXPC7Hf8e1-DnSbvVD8hQ0seH8nqbZ47nFWg33yMRqFXiOy_vENzkhh5crcemMBg2_w4sf9p3ybfWYMbIfIHzeUlYN5cNgtYDxDqZLH_TIfK2S8"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://104.131.55.81/desafio-agendamento/api/getAllBySpace?spaceid=5&start=20-10-11&end=20-10-15",
+					"protocol": "http",
+					"host": [
+						"104",
+						"131",
+						"55",
+						"81"
+					],
+					"path": [
+						"desafio-agendamento",
+						"api",
+						"getAllBySpace"
+					],
+					"query": [
+						{
+							"key": "spaceid",
+							"value": "5"
+						},
+						{
+							"key": "start",
+							"value": "20-10-11"
+						},
+						{
+							"key": "end",
+							"value": "20-10-15"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
